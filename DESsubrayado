@@ -1,0 +1,55 @@
+UD 01
+UD 02
+UD 03
+Sentencias condicionales IF; IF-ELSE y switch-case:
+	Las estructuras de control permiten modiicar el flujo de ejecucion de las instrucciones de un programa, es decir, permiten realizar una serie de operaciones que incrementan las posibilidades de un programa. Si no existieran, el código seria completamente lineal.
+ID 04
+Método GET
+	Get: Envia la petición de información desde el navegador al servidor.
+Método Post
+	Post: Se utiliza para enviar informacion al sercidor.
+Explicación aclaración URI, URL, URN
+	http://www.mipaginaweb.es/index.html#noticias	   =>	URI
+	http://www.mipaginaweb.es/index.html	=>	URL
+	www.mipaginaweb.es/index.html	=>	URN
+Formularios con método GET
+	Para iniciar el tipo de envio que se está generando, se utiliza el atributo 'METHOD' y a continuación el método a utilizar. El  funcionamiento se basa en el envío al archivo.php indicado bajo el atributo 'ACTION'
+Formularios con método POST
+	Igual que el anterior, se añade el método Post al atributo method
+UD 05
+Introduccion y contextualizacion práctica.
+	El desarrollo permite varuis mecanicsmos que permiten mantener el estado de una sesión. A través de autenticaión de los usuarios, pueden mantener el estado de la conexxión a otra, como mantener los datos.
+	Tanto cookies como el control de sesiones almacenan información para garantizare el estado de la sesión, la diferencia se encuentra en que con las cookies la información queda almacenada en el cliente, con el control de desiones se lleva a vabo en el servidor.
+Cookies
+	Las cookies consisten en un archivo de texto que se almacena en el equipo y que cot iene alfunos datos relevantes, como el número SID(Identidicadoe de Seguridad)
+	
+Seguridad. Perfiles, roles y usuarios
+	Si el usuario existe, se crea o abree una sesión y se almacena en el array de datos de sesión $_SESSION el id de usuario.
+OpenID
+	Es un estandar que permite que cualquier usurio de un sitio web pueda identificarse en un sitio web utilizandoo una URL
+OUATH
+	Es un estandar abierto que permite la autorización de APIS, lo que posibilita conpartir infomración entre varios sitios sin compartir la identidad, actualmente se usa bastante.
+UD 06
+LDAP y control de sesiones
+	Es un protocolo que permite el aceso a un servicio de directorios ordenado y distribuido para buscar informacion diversa en un entorno de red.
+	LDAP permite el aceso a un servidio de directorios ordenado y distribuido para localiar la información requerida en un entorno en red.
+	Una de las primncipales ventajas de uso de este protocolo es que permite centralizar toda la información y que sea accesible para una reed desde cualquier parte.
+	La funciónnutilizada para la autenticación es ldap_blind(), que recibe como parámetro obligatorio el identificador de conexión LDAP, y de manera opcional, el ususario y la contraseña de acceso. En el aso de no enviarse como parametro, se considerará un acceso anónimo.
+	Para cerrar la conexion, se uttiliza la funcion ldap_unbild() o ldap_close(), que en este caso, colo recibe por parametro el identificador devuelto por la funcion de conexion ldap_connect().
+Pruebas y duración.
+	Diferenciamos por un lado pryebas de caja negra, en las cuales se evalua la aplicacion desde un punto de vista externo, sin preocuparnos del interior, (habituales para prueba de interfaces)
+	Por otro lado las pruebas de caja blanca, estas se basan en la evaluacion del codigo, interno del software. (Todos los posibles caminos)
+	Tambien diferenciar pruebas de modulos o modulares, o las pruebas de funcionamiento general. Las general se realizan cuando todos los modulos del sistema se encuentran integrado, puesto que lok que se pretende es validar el funcionamiento globl de la aplicación antes de ser entregada al cliente.
+	Tipos de pruebas:
+		Pruebas unitarias: Este tipo de pruebas evalúan funcionalidades concretas.
+		Pruebas de integración: Tras realizar las pruebas unitarias, se utilizan las de integracion en toda la aplicacion ya completamente integrada.
+		Pruebas de regresión: Este tipo de pruebas es muy comun y a la vez muy importante, puesto que o,pplica volveer a verifiar aquello que ya habia sido evaliado previamente y habia generado lgun tipo de error.
+		Pruebas de seguridad : Este tipo de pruebas sse centran, sobre todo, en la evaluacion de los sistemas de proteccion y autrenticacion de una aplicacion.
+		Pruebas de volumen y de carga: En alunas ocasiones, es necesario manejar una ran cantidad de datos y pued que el software no sopoete un acceso masivo, por ello que será necesario comprobar este tipo de acceso.
+	Depuración del código.
+		Secentra en la revision del codigo para la deteccion de posibles errores y la correccion de los mismos. (e de compilacion, de ejecucion y de logica)
+Herramientas para la gestion de pruebas. PHPUnit
+PHPUnit es unframework que permite la implementación de pruebas unitarias en PHP. Herramienta paea testing que permite realizar todo tipo de pruebas  para aquellas app desarrolladas en php.
+Gestores de contenido: Dreamweaver y joomia
+	Los gestores de contenido o CMS(Content Management System) son programas que permiten crear, editar y publicar contenido web utilizando una interfaz gráfica y posibilitando personalizar sus componentes si se tienen los conocimientos de programación necesarios. (software propietarios y libres)
+	Dreamweaver y wordpress son gestores de contenido, el segundo el mas utilizado en la actialidad.
