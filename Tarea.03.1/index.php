@@ -1,15 +1,22 @@
 <?php
 
 $texto = 'User1';
-$numero = '12344';
+$numero = '1234';
 
+// Condición 1: Acierta usuario y número
 if ($texto == 'User1' && $numero == '1234') {
     echo 'Genial, puedes pasar!!';
-} elseif ($texto == 'User1') {
+} 
+// Condición 2: Acierta usuario, falla número
+elseif ($texto == 'User1') {
     echo 'Lo siento, el usuario es correcto, pero la contraseña no';
-} elseif ($numero == '1234') {
+} 
+// Condición 3: Acierta número, falla usuario
+elseif ($numero == '1234') {
     echo 'Lo siento, este usuario no es válido';
-} else {
+} 
+// Condición 4: Falla todo
+else {
     echo 'No has acertado ninguna';
 }
 

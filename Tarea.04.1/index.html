@@ -8,31 +8,30 @@
 <body>
 	<nav></nav>
 	<main>
-		<div form__title>
+		<div class="form__title"> <!-- Agregado class="form__title" -->
 			<h1>Formulario</h1>	
 		</div>
 
 		<form action="verificar.php" method="post">
-			<div form__container>
-				
+			<div class="form__container"> <!-- Agregado class="form__container" -->
 				<label for="usuario">Usuario</label>
 				<br>
-				<input type="text" name="usuario" required> <!-- El name del input es el necesario para verificar.php -->
+				<input type="text" name="usuario" id="usuario" required> <!-- Agregado "id" para el atributo "for" del label -->
 				<br>
-				<label for="usuario">Contraseña</label>
+				<label for="contrasena">Contraseña</label> <!-- Cambiado "for" a "contrasena" -->
 				<br>
-				<input type="password" name="contrasena" required>
+				<input type="password" name="contrasena" id="contrasena" required> <!-- Agregado "id" para el atributo "for" del label -->
 				<br><br>
-				<button type="submit">Iniciar sesi&oacute;n</button>
+				<button type="submit">Iniciar sesión</button> <!-- Corregido "Iniciar sesi&oacute;n" a "Iniciar sesión" -->
 			</div>
 		</form>
 		<ul>
 			<hr>
-			<li>El usuario puede estar formado por letras y n&uacute;meros</li>
+			<li>El usuario puede estar formado por letras y números</li> <!-- Corregido "&uacute;" a "ú" y "&ntilde;" a "ñ" -->
 			<li>El usuario debe contener entre 6 y 15 caracteres</li>
 			<hr>
-			<li>La contrase&ntilde;a estar&aacute; formada exactamente por 7 caracteres y solo pueden ser letras</li>
-			<li>Adem&aacute;s, el login y la contraseña no pueden ser iguales</li>
+			<li>La contraseña estará formada exactamente por 7 caracteres y solo pueden ser letras</li> <!-- Corregido "&ntilde;" a "ñ" -->
+			<li>Además, el usuario y la contraseña no pueden ser iguales</li> <!-- Corregido "login" a "usuario" -->
 		</ul>
 		<script>
             // Comprobar si se redirige desde verificar.php con un error

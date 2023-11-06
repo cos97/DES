@@ -1,0 +1,55 @@
+Esto es en arch (para otros linux, mirar primero)
+sudo pacman -S composer
+export PATH="/home/cos7/.config/composer/vendor/bin:$PATH"
+source ~/.zshrc
+ -- En el archivo index.php, crear TestMiClase.php y escribir lo siguiente (modificando funciones segun el index.php)
+<?php
+
+equire_once '/home/cos7/.config/composer/vendor/autoload.php';
+
+use PHPUnit\Framework\TestCase;
+
+class MiClaseTest extends TestCase
+{
+    public function testAciertaTodo()
+    {
+        $texto = 'User1';
+        $numero = '1234';
+        
+        $this->expectOutputString('Genial, puedes pasar!!');
+        include 'tu_archivo.php'; // Reemplaza 'tu_archivo.php' con la ruta a tu archivo
+
+        // También puedes realizar más aserciones si es necesario
+    }
+
+    public function testAciertaUsuarioFallaNúmero()
+    {
+        $texto = 'User1';
+        $numero = '5678';
+        
+        $this->expectOutputString('Lo siento, el usuario es correcto, pero la contraseña no');
+        include 'tu_archivo.php'; // Reemplaza 'tu_archivo.php' con la ruta a tu archivo
+    }
+
+    public function testAciertaNúmeroFallaUsuario()
+    {
+        $texto = 'User2';
+        $numero = '1234';
+        
+        $this->expectOutputString('Lo siento, este usuario no es válido');
+        include 'tu_archivo.php'; // Reemplaza 'tu_archivo.php' con la ruta a tu archivo
+    }
+
+    public function testFallaTodo()
+    {
+        $texto = 'User2';
+        $numero = '5678';
+        
+        $this->expectOutputString('No has acertado ninguna');
+        include 'tu_archivo.php'; // Reemplaza 'tu_archivo.php' con la ruta a tu archivo
+    }
+}
+
+Luego ejecutar en terminal en el directorio de index y MiClaseTest.php:
+phpunit Mic
+ClaseTest.php
