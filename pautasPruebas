@@ -1,0 +1,65 @@
+Entiendo que deseas realizar pruebas unitarias y pruebas funcionales en tu proyecto de tienda en línea y almacenar los resultados en una hoja de Excel, siguiendo el formato sugerido por tu profesor. A continuación, te proporcionaré ejemplos de pruebas unitarias y pruebas de funcionalidades que puedes realizar y cómo organizar los resultados en una hoja de Excel:
+
+Pruebas Unitarias (Inventario de Pruebas):
+
+    Caso de Prueba 1: Registro de Usuario
+        Nombre descriptivo: Prueba de registro de un nuevo usuario.
+        Pasos:
+            Acceder a la página de registro.
+            Completar el formulario de registro con datos válidos.
+            Enviar el formulario.
+        Resultado esperado: El usuario se registra con éxito y se redirige a la página de inicio.
+
+    Caso de Prueba 2: Acceso de Usuario Registrado
+        Nombre descriptivo: Prueba de acceso de un usuario registrado.
+        Pasos:
+            Acceder a la página de inicio.
+            Completar el formulario de acceso con credenciales válidas.
+            Iniciar sesión.
+        Resultado esperado: El usuario inicia sesión con éxito y se redirige a su perfil.
+
+    Caso de Prueba 3: Actualización de Datos de Usuario
+        Nombre descriptivo: Prueba de actualización de datos de usuario.
+        Pasos:
+            Iniciar sesión como usuario registrado.
+            Acceder a la página de edición de perfil.
+            Modificar los datos del usuario.
+            Guardar los cambios.
+        Resultado esperado: Los datos del usuario se actualizan correctamente.
+
+Pruebas Funcionales (Inventario de Pruebas):
+
+    Caso de Prueba 1: Registro de Usuario (RF01)
+        Nombre descriptivo: Prueba de registro de un nuevo usuario.
+        Pasos:
+            Acceder a la página de registro.
+            Completar el formulario de registro con datos válidos.
+            Enviar el formulario.
+        Resultado esperado: El usuario se registra con éxito y se redirige a la página de inicio.
+
+    Caso de Prueba 2: Control de Acceso de Usuarios (RF02)
+        Nombre descriptivo: Prueba de control de acceso de usuarios.
+        Pasos:
+            Acceder a la página de inicio.
+            Completar el formulario de acceso con credenciales válidas.
+            Iniciar sesión.
+        Resultado esperado: El usuario inicia sesión con éxito y se redirige a su perfil.
+
+    Caso de Prueba 3: Alta/Baja/Modificación de Usuarios (RF03)
+        Nombre descriptivo: Prueba de alta, baja y modificación de usuarios por el administrador.
+        Pasos:
+            Iniciar sesión como administrador.
+            Acceder a la gestión de usuarios.
+            Realizar operaciones de alta, baja y modificación de usuarios.
+        Resultado esperado: Las operaciones se realizan correctamente.
+
+En tu hoja de Excel, puedes crear dos pestañas, una para "Pruebas Unitarias" y otra para "Pruebas Funcionales". En cada pestaña, organiza los casos de prueba de la siguiente manera:
+
+    Columna A: Código de "Test Case" o Caso de prueba
+    Columna B: Nombre descriptivo del caso de prueba
+    Columna C: Descripción de los pasos
+    Columna D: Descripción del resultado esperado
+
+Después de ejecutar cada caso de prueba, puedes registrar los resultados en las columnas adicionales y tomar capturas de pantalla para evidenciar los resultados, como mencionó tu profesor. Asegúrate de incluir una columna para los resultados reales de cada prueba y una columna para las capturas de pantalla correspondientes.
+
+Este enfoque te permitirá realizar y documentar pruebas de manera efectiva y mantener un registro claro de los resultados.
