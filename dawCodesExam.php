@@ -267,3 +267,74 @@ Salida:
 Luego tenemos uso de funciones con parámetros:
 
 
+<?php
+
+	$nombre = "Pepe";
+	$apellido = "Garcia;
+
+function saludar ($aa, $bb){
+
+	echo "Hola " . $aa . " " . $bb;
+}
+
+saludar ($nombre, $apellido);
+  echo ("<br><br>");
+
+saludar ("Fernandez", "Jose");
+
+?>
+
+Salida:
+
+Hola Pepe Garcia
+Hola Fernandez Jose
+
+
+
+primera con nombre y apellidos y segunda con literales
+al revés (poniendo la funcion al final), funciona también igual.
+
+
+Get (visible)
+
+<html>
+<head>
+</head>
+<body>
+	<form method="get" action="file.php">
+	Nombre: <input type="text" name="nombre">
+	Apellido: <input type="text" name="apel">
+
+	<input tye="submit"/>
+	</form
+</body>
+</html>
+<?php
+ $nombre = $_GET['nombre'];
+ $apellido = $_GET['apel'];
+ echo "Valores del formulario: " . $nombre . " " . $apellido;
+<?
+
+Salida: Valores del formulario: Marcos Martin
+
+
+Post (no visible)
+<html>
+<head>
+</head>
+<body>
+        <form method="post" action="file.php">
+        Nombre: <input type="text" name="nombre">
+        Apellido: <input type="text" name="apel">
+
+        <input tye="submit"/>
+        </form
+</body>
+</html>
+<?php
+ $nombre = $_POST['nombre'];
+ $apellido = $_POST['apel'];
+ echo "Valores del formulario: " . $nombre . " " . $apellido;
+<?
+
+Salida: Valores del formulario: 
