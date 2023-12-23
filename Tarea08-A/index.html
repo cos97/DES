@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petición y Respuesta con AJAX</title>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<h1>Consulta con AJAX</h1>
+
+<label for="usuario">Ingrese un nombre de usuario:</label>
+<input type="text" id="usuario" placeholder="Nombre de usuario">
+<button onclick="realizarPeticion()">Consultar</button>
+
+<div id="respuesta"></div>
+<script>
+function realizarPeticion() {
+// Obtener el valor del campo de texto
+var nombreUsuario = document.getElementById('usuario').value;
+// Realizar la petición AJAX con jQuery
+$.ajax({
+    url: 'procesar.php',
+    type: 'POST',
+    data: { usuario: nombreUsuario },
+    success: function(respuesta) {
+        console.log('Respuesta del servidor:', respuesta);
+        document.getElementById('respuesta').innerHTML = respuesta;
+    },
+    error: function(error) {
+        console.error('Error en la petición AJAX:', error);
+    }
+});
+
+}
+</script>
+</body>
+</html>
+
