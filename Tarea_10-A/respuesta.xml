@@ -1,0 +1,10 @@
+<env:Envelope
+xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+xmlns:ns1="...">
+    <env:Header/>
+    <env:Body>
+        <ns1:RespuestaPrevision>
+            <ns1:PorcentajeLluvia>0.30</ns1:PorcentajeLluvia>
+        </ns1:RespuestaPrevision>
+    </env:Body>
+</env:Envelope>

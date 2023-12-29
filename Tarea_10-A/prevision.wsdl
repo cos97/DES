@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             targetNamespace="http://example.com/weather"
+             xmlns:tns="http://example.com/weather">
+
+    <!-- Types -->
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/weather">
+            <element name="ConsultaPrevision">
+                <complexType>
+                    <sequence>
+                        <element name="Ciudad" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="RespuestaPrevision">
+                <complexType>
+                    <sequence>
+                        <element name="PorcentajeLluvia" type="decimal"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+    </types>
+
+    <!-- Message Definitions -->
+    <message name="ConsultaPrevisionRequest">
+        <part name="parameters" element="tns:ConsultaPrevision"/>
+    </message>
+
+    <message name="RespuestaPrevision">
+        <part name="parameters" element="tns:RespuestaPrevision"/>
+    </message>
+
+    <!-- PortType Definition -->
+    <portType name="PrevisionPortType">
+        <operation name="ConsultarPrevision">
+            <input message="tns:ConsultaPrevisionRequest"/>
+            <output message="tns:RespuestaPrevision"/>
+        </operation>
+    </portType>
+
+    <!-- Binding Definition -->
+    <binding name="PrevisionBinding" type="tns:PrevisionPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="ConsultarPrevision">
+            <soap:operation soapAction="http://example.com/weather/ConsultarPrevision"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+
+    <!-- Service Definition -->
+    <service name="PrevisionService">
+        <port name="PrevisionPort" binding="tns:PrevisionBinding">
+            <soap:address location="http://example.com/weather/service"/>
+        </port>
+    </service>
+</definitions>
